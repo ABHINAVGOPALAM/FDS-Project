@@ -4,4 +4,5 @@ the ladder to a different position/cell and if he reaches a snake then it brings
 
 #include<stdio.h>
 #include<stdlib.h>
-
+void main()
+{}
