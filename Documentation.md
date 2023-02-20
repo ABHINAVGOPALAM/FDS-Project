@@ -3,6 +3,7 @@
 name:role-contribution
 
 **2.AIM**
+
 To make a snake and ladder game using c programming
 
 **3.LEARNINGS**
@@ -25,4 +26,19 @@ explaining the output
 **7.CODE**
 
 ...
+
+**PROBLEM STATEMENT**
+
+
+**GRAPH**
+
+
+**BFS**
+
+
+**MAIN CODE**
+
+**SAMPLE TEST CASES**
+
+
 
