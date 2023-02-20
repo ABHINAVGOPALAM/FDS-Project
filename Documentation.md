@@ -1,1 +1,17 @@
+**1.TEAM**
+
+**2.AIM**
+
+**3.LEARNINGS**
+
+**4.WORKING OF GAME**
+*(OUTPUT)*
+
+**5.LIBRARIES AND FUNCTIONS USED**
+
+**6.ALGORITM TO EACH FUNCTION**
+
+*maybe flowcharts* 
+
+**7.CODE**
 
