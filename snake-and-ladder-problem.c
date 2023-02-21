@@ -4,10 +4,6 @@ the ladder to a different position/cell and if he reaches a snake then it brings
 
 #include<stdio.h>
 #include<stdlib.h>
-void main()
-{}
-
-<<<<<<< HEAD
 void bfs();
 void path();
 void create_board(struct node *board[])
@@ -48,8 +44,3 @@ void main()
     create_board(board);
 
 }
-
-
-
-=======
->>>>>>> 4446047c602d76737418cefb960196d78961fa92
