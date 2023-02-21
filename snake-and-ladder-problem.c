@@ -6,3 +6,50 @@ the ladder to a different position/cell and if he reaches a snake then it brings
 #include<stdlib.h>
 void main()
 {}
+
+<<<<<<< HEAD
+void bfs();
+void path();
+void create_board(struct node *board[])
+{
+    for(i=0;i<n+1;i++)
+    {
+        for(j=i+1;j<i+7 && j<=no_of_nodes;j++)
+        {
+            newnode=(struct node*)malloc(sizeof(struct node));
+            newnode->data=int i;
+            newnode->link=NULL;
+        }
+        if(board[i]==NULL)
+        {
+            board[i]=newnode;
+        }
+
+    }
+
+}
+void snakes_and_ladders();
+
+struct node
+{
+    int data;
+    struct node *link;
+};
+int no_of_nodes;
+void main()
+{
+    printf("\nENTER THE ending square in the board : ");
+    scanf("%d",&no_of_nodes);
+    struct node *board[no_of_nodes+1];
+    for (i=1;i<n+1;i++)
+    {
+        board[i]=NULL;
+    }
+    create_board(board);
+
+}
+
+
+
+=======
+>>>>>>> 4446047c602d76737418cefb960196d78961fa92
