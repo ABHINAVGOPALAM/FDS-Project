@@ -66,14 +66,16 @@
 # SNAKE AND LADDER FUNCTION
 
 ## updates the already created board by adding  the snakes and ladders in the graph representation
-
-
-
-
-
-
-
-
+    
+* iterates through the list backwards 6 nodes 
+    - from the starting of a snake or
+    - from the end of a ladder
+* replace :
+  - starting vertex of snake with ending vertex of snake wherever it occurs
+  - ending vertex of ladder with starting vertex of ladder wherever it occurs
+* remove the adjacent vertices of :
+   - starting node of snake
+   - ending node of ladder 
 
 # DISPLAY GRAPH
 
