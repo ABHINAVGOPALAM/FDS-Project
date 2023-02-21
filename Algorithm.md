@@ -42,37 +42,22 @@
 * Initialize a visited array and mark the starting vertex as visited.
 
 * Follow the below process till the queue becomes empty:
-1.    Remove the first vertex of the queue.
-2.    Mark that vertex as visited.
-3.    Insert all the unvisited neighbors of the vertex into the queue.
+   - Remove the first vertex of the queue.
+   - Mark that vertex as visited
+   - Insert all the unvisited neighbors of the vertex into the queue.
 
 
+# CREATE GRAPH
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* for adjacency list 
+   - initialize an array of self referencial structure and make every entry link to NULL
+   - iterate through the list and add adjacent vertices for each vertex
+   - adjacent vertices are the next 6 vertices on the board for any given vertex
+* for adjacency matrix 
+   - initialize a 2-dimensional array
+   - iterate through the array and set the values 1 for the vertices adjacent to each vertex
+   - adjacent vertices are the next 6 vertices on the board for any given vertex
+  
 
 # SNAKE AND LADDER FUNCTION
 
@@ -86,21 +71,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # DISPLAY GRAPH
-   
+
+* for adjacency list 
+   -
+* for adjacency matrix 
+   - 
+
+
