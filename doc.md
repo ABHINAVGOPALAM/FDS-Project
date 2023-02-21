@@ -41,4 +41,22 @@ this function is used to create the board of given size
 
 **void snakes**
 
-this function is 
+this function is used to craete a link for the given values with given start and end points
+
+
+
+
+
+**void ladders**
+
+this function is used create the ladders from the given start and end points
+
+
+
+
+
+
+
+**void bfs**
+
+this function is used to find the shortest path from the  start ponit to the end point
