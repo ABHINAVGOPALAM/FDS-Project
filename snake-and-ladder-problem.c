@@ -1,19 +1,15 @@
-/*Given a snake and ladder board, find the minimum number of dice throws required to reach the destination or last cell from source or 1st cell. This is done by
-considering that the player can determine which number appears in the dice being biased. The player rolls the dice and if reaches a base of a ladder then he can move up
-the ladder to a different position/cell and if he reaches a snake then it brings him down away from the destination cell position.*/
-
 #include <stdio.h>
 #include <stdlib.h>
 #define max 100
-int no_of_nodes, i, j, ns, end, start, a, nl,star,en,x;
-int queue[max],front=-1,rear=-1,new;
+int no_of_nodes, i, j, ns, end, start, a, nl, star, en, x;
+int queue[max], front = -1, rear = -1, new;
 int parent[101];
 int min_no_of_rolls[101];
-int abhi=1;
+int abhi = 1;
 int dequeue();
 void enqueue(int x);
 void display_graph(struct node *board[]);
-void bfs(int b,struct node *board[]);
+void bfs(int b, struct node *board[]);
 void path();
 void snakes(int start, int end, struct node *board[]);
 void ladders(int end, int start, struct node *board[]);
@@ -51,51 +47,48 @@ void main()
     {
         printf("Enter the starting cell and ending value of  Ladder %d : \n ", i);
         scanf("%d%d", &en, &star);
-       ladders(en, star, board);
+        ladders(en, star, board);
     }
 
     display_graph(board);
 
-    
-   bfs(abhi,board);
-
-    
+    bfs(abhi, board);
 }
 int dequeue()
 {
     int y;
-    if(front==-1)
-    printf("\nunderflow\n");
+    if (front == -1)
+        printf("\nunderflow\n");
     else
     {
-     y=queue[front];
-     if(front==rear)
-     {
-        front=-1;
-        rear=-1;
-     }
-     else
-    {
-      front++;
-    }
-    return y;
+        y = queue[front];
+        if (front == rear)
+        {
+            front = -1;
+            rear = -1;
+        }
+        else
+        {
+            front++;
+        }
+        return y;
     }
 }
 void enqueue(int x)
 {
-    if(rear==max-1)
-    printf("overflow\n");
+    if (rear == max - 1)
+        printf("overflow\n");
     else
     {
-        if(rear==-1 && front==-1 )
+        if (rear == -1 && front == -1)
         {
-            front=0;
-            rear=0;
+            front = 0;
+            rear = 0;
         }
         else
-        rear++;
-        queue[rear]=x;
-    }  
+            rear++;
+        queue[rear] = x;
+    }
 }
 
 void display_graph(struct node *board[])
@@ -114,59 +107,56 @@ void display_graph(struct node *board[])
     }
 }
 
-
-void bfs(int b,struct node *board[])
+void bfs(int b, struct node *board[])
 {
-     for(j=0;j<=no_of_nodes+1;j++)
+    for (j = 0; j <= no_of_nodes + 1; j++)
     {
-        parent[j]=-1;
-        min_no_of_rolls[j]=-1;
+        parent[j] = -1;
+        min_no_of_rolls[j] = -1;
     }
 
     min_no_of_rolls[b] = 0;
     enqueue(b);
-    while(front<=rear)
+    while (front <= rear)
     {
-        new=queue[front];
+        new = queue[front];
 
         struct node *temp1;
-        temp1=board[new];
-        printf("%d\t",queue[front++]);
-        while(temp1!=NULL)
+        temp1 = board[new];
+        printf("%d\t", queue[front++]);
+        while (temp1 != NULL)
         {
-            queue[++rear]=temp1->data;
-            temp1=temp1->link;
-            
+            queue[++rear] = temp1->data;
+            temp1 = temp1->link;
         }
-        while(temp1->link!=NULL)
+        while (temp1->link != NULL)
         {
-            int p=temp1->data;
-            if(min_no_of_rolls[p]==-1)
+            int p = temp1->data;
+            if (min_no_of_rolls[p] == -1)
             {
-                min_no_of_rolls[p]=min_no_of_rolls[new]+1;
-                parent[p]=new;
+                min_no_of_rolls[p] = min_no_of_rolls[new] + 1;
+                parent[p] = new;
                 enqueue(p);
             }
-            temp1=temp1->link;
+            temp1 = temp1->link;
         }
-        int jaya=dequeue();
+        int jaya = dequeue();
     }
-    printf("%d\n",min_no_of_rolls[98]);
-    printf("%d\n",min_no_of_rolls[99]);
-    printf("%d\n",min_no_of_rolls[101]);
+    printf("%d\n", min_no_of_rolls[98]);
+    printf("%d\n", min_no_of_rolls[99]);
+    printf("%d\n", min_no_of_rolls[101]);
 }
 void path()
 {
-    
 }
 void snakes(int start, int end, struct node *board[])
 {
     for (a = start - 1; a >= start - 6 && a > 0; a--)
     {
-        struct node *temp=board[a];
+        struct node *temp = board[a];
         while (temp->data != start)
-            temp =temp->link;
-       temp->data = end;
+            temp = temp->link;
+        temp->data = end;
     }
     board[start] = NULL;
 }
@@ -175,10 +165,10 @@ void ladders(int end, int start, struct node *board[])
 {
     for (a = start - 1; a >= start - 6 && a > 0; a--)
     {
-        struct node *temp=board[a];
+        struct node *temp = board[a];
         while (temp->data != start)
-            temp =temp->link;
-       temp->data = end;
+            temp = temp->link;
+        temp->data = end;
     }
     board[start] = NULL;
 }
@@ -207,7 +197,3 @@ void create_board(struct node *board[])
         }
     }
 }
-
-
-
-
