@@ -1,60 +1,37 @@
-**INPUTS:**
 
- input of board size
-
-the no of snakes 
-
- the start point and end points of the snakes
-
-the no of ladders
-
-the start and destination points of the ladders
+# FUNCTIONS USED IN THE CODE
 
 
-**MAIN:**
+**create_board():**
 
-take the input of the board size
+    creates the board as a graph by representing it as an adjacency list or adjacency matrix
 
-create the board of given size using *create board* function
+**snakes():**
 
-the board is created of given size
+    updates the already created board by adding  the snakes in the graph representation
 
-specify the no of snakes
+**ladders():**
+    
+    updates the already created board by adding  the snakes in the graph representation
+    
+**display_graph():**
 
-specify the start and end postions of the snake
+    displays the board in the form of graph represenation either in adjacency matrix or adjacency list
+   
+**bfs():**
+    
+    implements the breadth first search algorithm on the board and returns the minimum number of dice rolls required to reach the last square
+    
+**path():**
 
-update the board with snakes using *snakes* function
+    gives the shortest path for reaching the last cell of the board
+ 
+**enqueue():**
 
-specify the no of ladders
+    inserts an element into the queue used while performing bfs 
 
-specify the start and end postions of the ladder
+**dequeue():**
 
-update the board with ladders using *ladders* function
+    deletes and returns an element from the queue used while performing bfs 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-**FUNCTIONS USED:**
-
-**void create board**
-
-this function is used to create the board of  given size 
-
-it craetes an adjacency list of all elemnts in the board with next node is assigned as null
-it adds the links upto next 6 elements 
-
+   
