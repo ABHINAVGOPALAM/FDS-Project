@@ -37,6 +37,8 @@
 
 # BFS
 
+## implements the breadth first search algorithm on the board and returns the minimum number of dice rolls required to reach the last square
+
 * Declare a queue and insert the starting vertex.
 
 * Initialize a visited array and mark the starting vertex as visited.
@@ -48,6 +50,8 @@
 
 
 # CREATE GRAPH
+
+## creates the board as a graph by representing it as an adjacency list or adjacency matrix
 
 * for adjacency list 
    - initialize an array of self referencial structure and make every entry link to NULL
@@ -61,7 +65,7 @@
 
 # SNAKE AND LADDER FUNCTION
 
-
+## updates the already created board by adding  the snakes and ladders in the graph representation
 
 
 
@@ -72,6 +76,8 @@
 
 
 # DISPLAY GRAPH
+
+## displays the board in the form of graph represenation either in adjacency matrix or adjacency list
 
 * for adjacency list 
    - initialize a temporary variable and iterate through the entire list and display all the vertices and adjacent vertices
