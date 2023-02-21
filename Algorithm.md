@@ -37,8 +37,14 @@
 
 # BFS
 
+* Declare a queue and insert the starting vertex.
 
+* Initialize a visited array and mark the starting vertex as visited.
 
+* Follow the below process till the queue becomes empty:
+1.    Remove the first vertex of the queue.
+2.    Mark that vertex as visited.
+3.    Insert all the unvisited neighbors of the vertex into the queue.
 
 
 
