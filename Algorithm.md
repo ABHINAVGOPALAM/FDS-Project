@@ -53,3 +53,8 @@ update the board with ladders using *ladders* function
 
 **void create board**
 
+this function is used to create the board of  given size 
+
+it craetes an adjacency list of all elemnts in the board with next node is assigned as null
+it adds the links upto next 6 elements 
+
