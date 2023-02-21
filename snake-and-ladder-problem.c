@@ -10,11 +10,57 @@ int queue[max],front=-1,rear=-1,new;
 int parent[101];
 int min_no_of_rolls[101];
 int abhi=1;
+int dequeue();
+void enqueue(int x);
+void display_graph(struct node *board[]);
+void bfs(int b,struct node *board[]);
+void path();
+void snakes(int start, int end, struct node *board[]);
+void ladders(int end, int start, struct node *board[]);
+void create_board(struct node *board[]);
 struct node
 {
     int data;
     struct node *link;
 };
+
+void main()
+{
+    printf("\nENTER THE ending square in the board : ");
+    scanf("%d", &no_of_nodes);
+    struct node *board[no_of_nodes + 1];
+    for (i = 1; i < no_of_nodes + 1; i++)
+    {
+        board[i] = NULL;
+    }
+    create_board(board);
+    display_graph(board);
+
+    printf("\nEnter the number of snakes : ");
+    scanf("%d", &ns);
+    for (i = 1; i < ns + 1; i++)
+    {
+        printf("Enter the starting cell and ending value of  snake %d : \n ", i);
+        scanf("%d%d", &end, &start);
+        snakes(end, start, board);
+    }
+
+    printf("\nEnter the number of Ladders  : ");
+    scanf("%d", &nl);
+    for (i = 1; i < nl + 1; i++)
+    {
+        printf("Enter the starting cell and ending value of  Ladder %d : \n ", i);
+        scanf("%d%d", &en, &star);
+       ladders(en, star, board);
+    }
+
+    display_graph(board);
+
+    
+   bfs(abhi,board);
+
+    
+}
 int dequeue()
 {
     int y;
@@ -162,42 +208,6 @@ void create_board(struct node *board[])
     }
 }
 
-void main()
-{
-    printf("\nENTER THE ending square in the board : ");
-    scanf("%d", &no_of_nodes);
-    struct node *board[no_of_nodes + 1];
-    for (i = 1; i < no_of_nodes + 1; i++)
-    {
-        board[i] = NULL;
-    }
-    create_board(board);
-    display_graph(board);
 
-    printf("\nEnter the number of snakes : ");
-    scanf("%d", &ns);
-    for (i = 1; i < ns + 1; i++)
-    {
-        printf("Enter the starting cell and ending value of  snake %d : \n ", i);
-        scanf("%d%d", &end, &start);
-        snakes(end, start, board);
-    }
-
-    printf("\nEnter the number of Ladders  : ");
-    scanf("%d", &nl);
-    for (i = 1; i < nl + 1; i++)
-    {
-        printf("Enter the starting cell and ending value of  Ladder %d : \n ", i);
-        scanf("%d%d", &en, &star);
-       ladders(en, star, board);
-    }
-
-    display_graph(board);
-
-    
-   bfs(abhi,board);
-
-    
-}
 
 
