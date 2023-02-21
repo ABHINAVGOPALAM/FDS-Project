@@ -10,14 +10,38 @@ struct node
     int data;
     struct node *link;
 };
-int no_of_nodes, i, j,ns,end,start;
-void display_graph();
-void bfs();
-void path();
-void snakes_and_ladders(struct node *board[],int end ,int start)
+int no_of_nodes, i, j,ns,end,start,a,nl;
+void display_graph(struct node *board[])
 {
-
+    struct node *temp;
+    for(i=1;i<=no_of_nodes;i++)
+    {
+        temp=board[i];
+        printf("vertices adjacent to %d are : ",i);
+        while(temp!=NULL)
+        {
+            printf("%d\t",temp->data);
+            temp=temp->link;
+        }
+        printf("\n");
+    }
 }
+//void bfs(struct node *board[]);
+//void path();
+void snakes_and_ladders(int start,int end,struct node *board[])
+{
+    for(a=start-1;a>=start-6 && a>0;a--)
+    {
+        while(board[a]->data!=start)
+        board[a]=board[a]->link;
+        board[a]->data=end;
+    }
+    board[start]->link=NULL;
+}
+
+
+
+
 void create_board(struct node *board[])
 {
     struct node *last, *newnode;
@@ -42,12 +66,8 @@ void create_board(struct node *board[])
         }
     }
 }
-<<<<<<< HEAD
 
 
-=======
-void snakes_and_ladders();
->>>>>>> 269248f3650599026a20306f006a75ea0ab9c955
 void main()
 {
     printf("\nENTER THE ending square in the board : ");
@@ -65,18 +85,22 @@ void main()
     {
         printf("Enter the starting cell and ending value of  snake %d : \n ",i);
         scanf("%d%d",&end,&start);
-        snakes_and_ladders(board,end,start);
+        snakes_and_ladders(end,start,board);
     }
 
     printf("\nEnter the number of Ladders  : ");
-    scanf("%d",&ns);
-    for(i=1;i<ns+1;i++)
+    scanf("%d",&nl);
+    for(i=1;i<nl+1;i++)
     {
         printf("Enter the starting cell and ending value of  Ladder %d : \n ",i);
         scanf("%d%d",&end,&start);
-        snakes_and_ladders(board,end,start);
+        snakes_and_ladders(end,start,board);
     }
+
+    display_graph(board);
+
     
-    display_graph();
-    bfs(board);
+
+
+
 }
