@@ -74,8 +74,9 @@
 # DISPLAY GRAPH
 
 * for adjacency list 
-   -
+   - initialize a temporary variable and iterate through the entire list and display all the vertices and adjacent vertices
+   - vertex : adjacent vertex -> adjecent vertex ->..... 
 * for adjacency matrix 
-   - 
+   - display the 2-dimensional array in the form of a 0,1 matrix 
 
 
