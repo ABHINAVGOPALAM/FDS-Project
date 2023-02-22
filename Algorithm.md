@@ -5,7 +5,8 @@
 **create_board():**
 
  ##   creates the board as a graph by representing it as an adjacency list or adjacency matrix
-    
+ 
+   * it takes the struct node pointer array(board) as arguments   
    * craete a for loop from cell 1  to to the last cell
    * create another for loop inside the main for loop for adding the adjacent elements to the each vertex 
    * create a new node dynamically for each element and link it to the previous node in linkedlist
@@ -13,15 +14,24 @@
 
 **snakes():**
 
-    updates the already created board by adding  the snakes in the graph representation
+   * updates the already created board by adding  the snakes in the graph representation
+   *  it takes the arguments head of the snake as start to the tail of the snake as end
+   *  replaces the starting vertex of snake with ending vertex of snake wherever it occurs by using afor loop
+   *  it replaces the  starting node of snake by making it as null
 
 **ladders():**
     
-    updates the already created board by adding  the snakes in the graph representation
+   * updates the already created board by adding  the snakes in the graph representation
+   *  it takes the arguments satrt of the ladder to the end destination of the ladder
+   *  replaces the ending vertex of ladder with starting vertex of ladder wherever it occurs
+   *  it replaces the  ending node of ladder by making it as null
     
 **display_graph():**
 
-    displays the board in the form of graph represenation either in adjacency matrix or adjacency list
+   * displays the board in the form of graph represenation either in adjacency matrix or adjacency list
+   * it atkes the arguments as borad 
+   * by taking the for loop it prints the every vertex with all of its adjacent vertices
+   
    
 **bfs():**
     
