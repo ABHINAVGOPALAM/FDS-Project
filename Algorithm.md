@@ -4,7 +4,12 @@
 
 **create_board():**
 
-    creates the board as a graph by representing it as an adjacency list or adjacency matrix
+ ##   creates the board as a graph by representing it as an adjacency list or adjacency matrix
+    
+   * craete a for loop from cell 1  to to the last cell
+   * create another for loop inside the main for loop for adding the adjacent elements to the each vertex 
+   * create a new node dynamically for each element and link it to the previous node in linkedlist
+   * the board is created in the form of graph represented as adjacency list
 
 **snakes():**
 
