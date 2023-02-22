@@ -57,10 +57,10 @@ void main()
 
     display_graph(board);
     
-    printf("\nEnter from which element you want to search : ",);
+    printf("\nEnter from which element you want to search : ");
     scanf("%d",&var5);
     bfs(var5, board);
-    printf("\nEnter the destination cell : ",);
+    printf("\nEnter the destination cell : ");
     scanf("%d",&var6);
     printf("\nshortest path from %d to %d is : ",var5,var6);
     path(parent, var6);
