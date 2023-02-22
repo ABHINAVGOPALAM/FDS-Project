@@ -35,12 +35,22 @@
    
 **bfs():**
     
-    implements the breadth first search algorithm on the board and returns the minimum number of dice rolls required to reach the last square
-    
+   * implements the breadth first search algorithm on the board and returns the minimum number of dice rolls required to reach the last square
+   * it takes two arguments as board and the starting argument
+   * we define two arrays as parent: and min no of nodes : by setting all the entries as -1
+   - parent node is to keep track of the path of the bfs
+   - min no of roles[i] gives the no of die rools to the ith cell
+   * we perform bfs by using a queue 
+
+
 **path():**
 
-    gives the shortest path for reaching the last cell of the board
- 
+   * gives the shortest path for reaching the last cell of the board
+   * it takes the arguments as parent and destination
+   * untill parent[destination] != 0 
+   - we recurcively call this function untill it reaches the destination 
+   * to display the path taken by the bfs algorithm
+   
 **enqueue():**
 
     inserts an element into the queue used while performing bfs 
